@@ -8,7 +8,7 @@ import Slide3 from "../../assets/img/slide3.jpg";
 const ImageCarousal = () => (
   <div>
     <div className="overlay"></div>
-    <Carousel autoPlay showArrows={false} showStatus={false} showThumbs={false} infiniteLoop stopOnHover={false} interval={2500}>
+    <Carousel autoPlay showArrows={false} showStatus={false} showThumbs={false} infiniteLoop stopOnHover={false} interval={2500} transitionTime={450}>
       <div>
         <img src={Slide3} alt="" />
       </div>
