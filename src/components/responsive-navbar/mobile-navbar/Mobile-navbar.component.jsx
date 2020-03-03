@@ -6,11 +6,11 @@ const MyMobileNavbar = styled.nav`
   width: 50vw;
   background: ${props => props.theme.primary};
   align-self: flex-end;
-
-  margin-bottom: 15px;
-
   transition: transform 0.5s;
-  transform: translateX(${props => (props.displayMobileNavbar ? "0%" : "calc(100% + 15px)")});
+  transform: translateX(${props => (props.displayMobileNavbar ? "0%" : "calc(100%)")});
+  top: -2px;
+  position: relative;
+  z-index: 9999;
 
   .nav-links {
     display: flex;

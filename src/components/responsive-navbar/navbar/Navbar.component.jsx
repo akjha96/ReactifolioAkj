@@ -8,6 +8,10 @@ const MyNavbar = styled.div`
   flex-flow: column nowrap;
   justify-content: flex-start;
   overflow-x: hidden;
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  margin-bottom: 0;
 `;
 
 class Navbar extends Component {

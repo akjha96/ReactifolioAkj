@@ -1,18 +1,22 @@
 import React from "react";
 import Navlinks from "../navlinks/Navlinks.components";
 import styled from "styled-components";
-import mobileNavIcon from "../../../images/mobile-nav-icon.svg";
+import mobileNavIcon from "../../../assets/icons/mobile-nav-icon.svg";
 
 const MyDesktopNavbar = styled.nav`
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-evenly;
+  padding: 0 20px;
+  justify-content: space-between;
   align-items: center;
+
+  position: relative;
+  z-index: 9999;
 
   background: ${props => props.theme.primary};
   color: ${props => props.theme.textColor};
 
-  height: 15vh;
+  height: 11vh;
 
   .logo {
     font-size: 7vh;
@@ -25,7 +29,7 @@ const MyDesktopNavbar = styled.nav`
     flex-flow: row nowrap;
     justify-content: space-evenly;
     align-items: center;
-    width: 35vh;
+    width: 30vh;
     list-style: none;
 
     @media screen and (max-width: 768px) {
@@ -75,6 +79,10 @@ const MyMobileNavButton = styled.button`
   border: none;
   color: white;
   display: none;
+
+  img {
+    cursor: pointer;
+  }
 
   transition: transform 0.5s ease-in-out;
   transform: rotate(${props => (props.displayMobileNavbar ? "540deg" : "0deg")});
