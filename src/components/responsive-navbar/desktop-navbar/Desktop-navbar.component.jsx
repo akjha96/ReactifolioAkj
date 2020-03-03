@@ -2,6 +2,7 @@ import React from "react";
 import Navlinks from "../navlinks/Navlinks.components";
 import styled from "styled-components";
 import mobileNavIcon from "../../../assets/icons/mobile-nav-icon.svg";
+import Logo from "../../../assets/icons/logow.png";
 
 const MyDesktopNavbar = styled.nav`
   display: flex;
@@ -19,10 +20,8 @@ const MyDesktopNavbar = styled.nav`
   height: 11vh;
 
   .logo {
-    font-size: 7vh;
-    font-weight: bold;
-    text-shadow: 5px 2px 5px #45a29e;
-    color: ${props => props.theme.textColor};
+    width: 5vw;
+    cursor: pointer;
   }
   .nav-links {
     display: flex;
@@ -98,7 +97,7 @@ const MyMobileNavButton = styled.button`
 const DesktopNavbar = props => {
   return (
     <MyDesktopNavbar>
-      <div className="logo">Logo</div>
+      <img className="logo" src={Logo} alt="" />
 
       <Navlinks />
       <MyMobileNavButton displayMobileNavbar={props.displayMobileNavbar} onClick={props.toggleMobileNavbar}>
